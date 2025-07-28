@@ -131,22 +131,6 @@ shell:> q "What are Spring Boot starters?"
 shell:> exit
 ```
 
-## 🔧 Development Commands
-
-```bash
-# Run tests
-./mvnw test
-
-# Build for production
-./mvnw clean package
-
-# Build native image (requires GraalVM)
-./mvnw -Pnative native:compile
-
-# Clean build artifacts
-./mvnw clean
-```
-
 ## 📊 How It Works
 
 1. **Document Loading**: On startup, `ReferenceDocsLoader` checks if documents exist in the vector store
@@ -216,25 +200,6 @@ Try asking questions like:
 - "How do I create a REST controller?"
 - "What are the different ways to configure properties?"
 - "How does Spring Boot handle dependency injection?"
-
-## 🚨 Troubleshooting
-
-### Common Issues
-
-1. **Database Connection Failed**
-   - Ensure PostgreSQL is running: `docker ps`
-   - Check connection settings in `application.yaml`
-
-2. **OpenAI API Errors**
-   - Verify your API key is set correctly
-   - Check your OpenAI account has sufficient credits
-
-3. **Out of Memory Errors**
-   - Increase JVM heap size: `export MAVEN_OPTS="-Xmx2g"`
-
-4. **Vector Store Issues**
-   - Restart the database: `docker-compose restart`
-   - Check logs: `docker-compose logs pgvector`
 
 ## 📄 License
 
